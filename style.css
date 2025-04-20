@@ -30,6 +30,7 @@ html {
     padding-inline: 5%;
     padding-block: 100px;
 }
+
 .primary-button,
 .light-button{
     padding: 8px 14px;
@@ -37,6 +38,19 @@ html {
     border-radius:var(--small-radius);
     font-weight: 600;
     cursor: pointer;
+    display:flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.hover-icon-right:hover i {
+    transform: translateX(4px);
+}
+
+.primary-button i,
+.light-button i {
+    font-size: 24px;
+    transition: 300ms ease;
 }
 
 .primary-button{
@@ -76,6 +90,7 @@ html {
     width: 100%;
     background: linear-gradient(to right, white, var(--background-primary-color));
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
 }
 .header__title {
     color: var(--primary-color);
@@ -148,9 +163,184 @@ html {
 }
 
 /* end section home*/
-/* SECTION ABOUT */
-.section-title,
-.section-desc {
+/* SECTION meanu */
+.section-menus .section-title,
+.section-menus .section-desc {
     text-align:center;
 }
+.section-menus__cards{
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap:64px;
+    flex-wrap: wrap;
+
+}
+
+.section-menus__card{
+    border: 3px solid var(--border-primary-color);
+    width: 280px;
+    border-radius: var(--medium-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 240px;
+    justify-content: end;
+    margin-top: 64px;
+    cursor: pointer;
+    padding: 24px;
+}
+.section-menus__card:hover {
+    background: var(--primary-color);
+    color: white;
+    margin-top: 55px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+
+.section-menus__card-image{
+    width: 150px;
+}
+.section-menus__card-title{
+    font-size: 24px;
+    margin-top: 8px;
+}
+.section-menus__card-rating{
+    display:  flex;
+    align-items: center;
+    margin-top: 4px;
+
+}
+.section-menus__card-rating i{
+    color: #FFD600;
+    font-size: 24px;
+} 
+.section-menus__card-rating span {
+    margin-left: 4px;
+    font-size: 20px;
+}
+
+.section-menus__cards-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 14px;
+}
+
+.section-menus__card-price {
+    font-weight: 600;
+}
+
+.section-meanu__card-button--buy {
+    border-radius: var(--large-radius);
+}
+/* END SECTION meanu */
+
+/* SECTION ABOUT */
+.section-about {
+    display: flex;
+    gap: 64px;
+    background: linear-gradient(to right, white, var(--background-primary-color));
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-about__content{
+    max-width: 600px;
+
+}
+.section-about__image {
+    max-width: 350px;
+    object-fit: scale-down;
+}
+
+.section-about__stats {
+    display: flex;
+    gap : 24px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.section-about__stat {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.section-about_stat-number {
+    font-size:36px;
+    color: var(--primary-color);
+}
+
+.section-about_stat-desc {
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.section-about__stat-title {
+    color: var(--secondary-color);
+}
+
+.section-about__image-background-1 {
+    width: 150px;
+    position: absolute;
+    top: -50px;
+    right: -50px;
+}
+.section-about__image-background-2 {
+    width: 200px;
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+
+}
+
 /* END SECTION ABOUT */
+
+/* SECTION SERVICES */
+.section-services__cards {
+    margin-top: 64px;
+    display: flex;
+    gap : 32px;
+     justify-content: space-between;
+}
+.section-services__card {
+    padding: 24px;
+    transition: 300ms ease;
+    cursor: pointer;
+    width: 100%;
+}
+.section-services__card:hover {
+    background: var(--primary-color);
+    color: white;
+    scale: 1.01;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+.section-services__card:hover .section-services__card-icon {
+    background: var(--transparent-025);
+}
+.section-services__card:hover .section-services__card-icon i {
+    color: white;
+}
+
+.section-services__card-icon {
+    background: var(--background-primary-color);
+    width: fit-content;
+    border-radius: 99px;
+    transition: 300ms ease;
+}
+
+.section-services__card-icon i {
+    font-size: 40px;
+    padding: 12px;
+    color: var(--primary-color);
+    transition: 300ms ease;
+}
+
+.section-services__card title {
+    margin-top: 12px;
+
+}
+/*  END SECTION SERVICES */
